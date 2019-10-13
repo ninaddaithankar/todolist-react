@@ -12,8 +12,9 @@ export default class TodoComponent extends Component {
     return (
       <div style={todoBox}>
         <input
-          type="checkbox"
+          type='checkbox'
           onChange={this.props.markComplete.bind(this, this.props.todo.id)}
+          checked={this.props.todo.isCompleted}
         />
         <span style={this.getStyle()}> {this.props.todo.title}</span>
         <button
